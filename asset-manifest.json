@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.657dded1.css",
+    "main.js": "/static/js/main.cbbb9270.js",
+    "static/media/cropped-banner.png": "/static/media/cropped-banner.10a173421ca829e7d040.png",
+    "index.html": "/index.html",
+    "main.657dded1.css.map": "/static/css/main.657dded1.css.map",
+    "main.cbbb9270.js.map": "/static/js/main.cbbb9270.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.657dded1.css",
+    "static/js/main.cbbb9270.js"
+  ]
+}
