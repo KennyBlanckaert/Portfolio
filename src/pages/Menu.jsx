@@ -43,7 +43,7 @@ const Menu = function() {
         <Link className={`${classes.item} ${classes.active}`} to="/">Home</Link>
         <Link className={`${classes.item}`} to="/about">About</Link>
         <Link className={`${classes.item}`} to="/resume">Resume</Link>
-        <Link className={`${classes.item}`} to="/portfolio">Portfolio</Link>
+        <Link className={`${classes.item}`} to="/projects">Projects</Link>
       </Stack>
     </Container>
   );

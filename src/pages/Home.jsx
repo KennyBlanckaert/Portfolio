@@ -16,26 +16,26 @@ const useStyles = makeStyles({
   },
   firstname: {
     fontFamily: 'Motor Oil 1937 M54',
-    fontSize: 70,
+    fontSize: 60,
     color: '#ffffff',
     margin: 0,
-    paddingTop: 425,
+    paddingTop: 290,
     paddingLeft: 250,
   },
   lastname: {
     fontFamily: 'Motor Oil 1937 M54',
     fontWeight: 'bold',
-    fontSize: 90,
+    fontSize: 80,
     color: '#ffffff',
     marginLeft: 0,
     marginTop: -20,
     paddingTop: 0,
-    paddingLeft: 250,
+    paddingLeft: 247,
   },
   function: {
     fontFamily: 'Athiti',
-    fontSize: 50,
-    letterSpacing: 8.5,
+    fontSize: 40,
+    letterSpacing: 9,
     color: '#ffffff',
     marginLeft: 0,
     marginTop: -20,
@@ -55,8 +55,8 @@ const useStyles = makeStyles({
     textDecoration: 'none',
   },
   button: {
-    width: 250,
-    maxWidth: 250,
+    width: 220,
+    maxWidth: 220,
     height: 50,
     border: '2px solid',
     borderRadius: 22,
@@ -104,9 +104,9 @@ const Home = function() {
             Resume
           </Container>
         </Link>
-        <Link className={`${classes.link}`} to="/portfolio">
+        <Link className={`${classes.link}`} to="/projects">
           <Container className={`${classes.button}`} maxWidth={false} disableGutters>
-            Portfolio
+            Projects
           </Container>
         </Link>
       </Container>
