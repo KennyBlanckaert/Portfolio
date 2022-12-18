@@ -33,7 +33,11 @@ const useStyles = makeStyles({
 
     "@media (max-width: 900px)": {
       fontSize: 30,
-      // paddingTop: 190,
+      paddingTop: 190,
+    },
+    "@media (max-width: 500px)": {
+      fontSize: 30,
+      paddingTop: 250,
     }
   },
   lastname: {
@@ -137,7 +141,7 @@ const Home = function() {
             Resume
           </Container>
         </Link>
-        <Link className={`${classes.link}`} to="/projects">
+        <Link className={`${classes.link}`} to="/portfolio">
           <Container className={`${classes.button}`} maxWidth={false} disableGutters>
             Projects
           </Container>

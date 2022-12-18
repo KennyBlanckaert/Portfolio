@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from '@mui/material/Container'
 import Stack from '@mui/material//Stack';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { makeStyles } from '@mui/styles';
 
@@ -11,11 +15,81 @@ const useStyles = makeStyles({
     backgroundColor: 'rgba(10, 10, 10, 0.1)',
     top: 0,
     left: 0,
+
+    // Media query: 400px
+    "@media (max-width: 400px)": {
+      maxWidth: 0,
+      backgroundColor: 'rgba(10, 10, 10, 0)',
+    },
   },
-  stack: {
+  icon: {
+    color: 'white'
+  },
+  menuOpen: {
+    position: 'absolute !important',
+    top: 10,
+    left: 10,
+    visibility: 'hidden',
+
+    // Media query: 400px
+    "@media (max-width: 400px)": {
+      maxWidth: 100,
+      position: 'absolute',
+      top: 10,
+      left: 10,
+      visibility: 'hidden'
+    },
+  },
+  menuClosed: {
+    position: 'absolute !important',
+    top: 10,
+    left: 10,
+    visibility: 'hidden',
+
+    // Media query: 400px
+    "@media (max-width: 400px)": {
+      maxWidth: 100,
+      position: 'absolute',
+      top: 10,
+      left: 10,
+      visibility: 'visible'
+    },
+  },
+  stackOpen: {
     width: 500,
     height: 15,
-    margin: 10,
+    position: 'absolute',
+    top: 10,
+    left: 10,
+
+    // Media query: 400px
+    "@media (max-width: 400px)": {
+      maxWidth: 200,
+      position: 'absolute',
+      top: 30,
+      left: -10,
+      visibility: 'visible',
+      display: 'inline-grid !important',
+      marginTop: 10,
+    },
+  },
+  stackClosed: {
+    width: 500,
+    height: 15,
+    position: 'absolute',
+    top: 10,
+    left: 10,
+
+    // Media query: 400px
+    "@media (max-width: 400px)": {
+      maxWidth: 200,
+      position: 'absolute',
+      top: 30,
+      left: -10,
+      visibility: 'hidden',
+      display: 'inline-grid !important',
+      marginTop: 10,
+    },
   },
   item: {
     fontFamily: 'Motor Oil 1937 M54',
@@ -27,23 +101,44 @@ const useStyles = makeStyles({
 
     "&:hover": {
       color: '#0c3e52',
-    }
+    },
+
+    // Media query: 400px
+    "@media (max-width: 400px)": {
+      marginTop: 10,
+    },
   },
   active: {
     color: '#0c3e52',
+  },
+  inactive: {
+    color: 'white',
   },
 });
 
 const Menu = function() {
   const classes = useStyles();
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = event => {
+    setIsOpen(current => !current);
+    console.log(location)
+  };
 
   return (
     <Container className={`${classes.menu}`} maxWidth={false} disableGutters>
-      <Stack className={`${classes.stack}`} direction="row" justifyContent="space-around">
-        <Link className={`${classes.item} ${classes.active}`} to="/">Home</Link>
-        <Link className={`${classes.item}`} to="/about">About</Link>
-        <Link className={`${classes.item}`} to="/resume">Resume</Link>
-        <Link className={`${classes.item}`} to="/projects">Projects</Link>
+      <IconButton className={`${ isOpen ? classes.menuOpen : classes.menuClosed}`} size='large' onClick={toggle}>
+        <MenuIcon className={`${classes.icon}`}/>
+      </IconButton>
+      <IconButton className={`${ isOpen ? classes.menuClosed : classes.menuOpen}`} size='large' onClick={toggle}>
+        <CloseIcon className={`${classes.icon}`}/>
+      </IconButton>
+      <Stack className={`${ isOpen ? classes.stackOpen : classes.stackClosed}`} direction="row" justifyContent="space-around">
+        <Link className={`${classes.item} ${location.pathname == '/' ? classes.active : classes.inactive}`} to="/">Home</Link>
+        <Link className={`${classes.item} ${location.pathname == '/about' ? classes.active : classes.inactive}`} to="/about">About</Link>
+        <Link className={`${classes.item} ${location.pathname == '/resume' ? classes.active : classes.inactive}`} to="/resume">Resume</Link>
+        <Link className={`${classes.item} ${location.pathname == '/portfolio' ? classes.active : classes.inactive}`} to="/portfolio">Portfolio</Link>
       </Stack>
     </Container>
   );
