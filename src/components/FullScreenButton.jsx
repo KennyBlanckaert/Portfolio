@@ -4,7 +4,7 @@ import FullscreenRoundedIcon from '@mui/icons-material/FullscreenRounded';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
-  fullscreen: {
+  button: {
     position: 'absolute !important',
     bottom: 25,
     right: 25,
@@ -16,15 +16,11 @@ const useStyles = makeStyles({
   }
 });
 
-function fullscreen() {
-  console.log("Fullscreen!");
-}
-
-const FullScreenIcon = function() {
+const FullScreenIcon = function({ handle }) {
   const classes = useStyles();
 
   return (
-    <IconButton className={`${classes.fullscreen}`} size='large' onClick={fullscreen}>
+    <IconButton className={`${classes.button}`} size='large' onClick={handle.enter}>
       <FullscreenRoundedIcon className={`${classes.icon}`}/>
     </IconButton>
   );

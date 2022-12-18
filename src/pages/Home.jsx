@@ -5,6 +5,9 @@ import { makeStyles } from '@mui/styles';
 
 import BannerImage from '../images/cropped-banner.png';
 
+import NextPageButton from '../components/NextPageButton';
+import SocialMediaBar from '../components/SocialMediaBar';
+
 const useStyles = makeStyles({
   banner: {
     backgroundImage: `url(${BannerImage})`,
@@ -16,57 +19,55 @@ const useStyles = makeStyles({
   },
   firstname: {
     fontFamily: 'Motor Oil 1937 M54',
-    fontSize: 60,
+    fontSize: '3.13vw',
     color: '#ffffff',
     margin: 0,
-    paddingTop: 290,
-    paddingLeft: 250,
+    paddingTop: '30vh',
+    paddingLeft: 'calc(13% - 2px)',
   },
   lastname: {
     fontFamily: 'Motor Oil 1937 M54',
     fontWeight: 'bold',
-    fontSize: 80,
+    fontSize: '4.17vw',
     color: '#ffffff',
     marginLeft: 0,
-    marginTop: -20,
+    marginTop: -15,
     paddingTop: 0,
-    paddingLeft: 247,
+    paddingLeft: 'calc(13% - 3px)',
   },
   function: {
     fontFamily: 'Athiti',
-    fontSize: 40,
-    letterSpacing: 9,
+    fontSize: '2.09vw',
+    letterSpacing: 'calc(0.9vh)',
     color: '#ffffff',
     marginLeft: 0,
-    marginTop: -20,
+    marginTop: -15,
     paddingTop: 0,
-    paddingLeft: 250,
+    paddingLeft: 'calc(13%)',
   },
   buttonGroup: {
-    width: 1500,
-    maxWidth: 1500,
+    maxWidth: 1000,
     height: 50,
-    marginTop: '50px !important',
+    marginTop: 'calc(10px + 5vh) !important',
     paddingTop: 0,
-    paddingLeft: 250,
+    paddingLeft: 'calc(13%)',
     margin: '0px !important',
   },
   link: {
     textDecoration: 'none',
   },
   button: {
-    width: 220,
-    maxWidth: 220,
-    height: 50,
+    maxWidth: '11.5vw !important',
+    height: 'calc(30px + 2.5vh) !important',
     border: '2px solid',
     borderRadius: 22,
     color: '#ffffff',
     fontFamily: 'Motor Oil 1937 M54',
-    fontSize: 25,
+    fontSize: '1.3vw',
     textAlign: 'center',
+    lineHeight: '45px',
     marginLeft: '20px !important',
     marginRight: '20px !important',
-    paddingTop: 8,
     display: 'inline-block !important',
     letterSpacing: 3,
 
@@ -113,6 +114,10 @@ const Home = function() {
       
 
       {/* Social media and Contacts icons */}
+      <SocialMediaBar />
+
+      {/* Next Page */}
+      <NextPageButton />
 
     </Container>
   );
