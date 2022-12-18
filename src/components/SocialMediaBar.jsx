@@ -16,8 +16,14 @@ const useStyles = makeStyles({
   iconBar: {
     position: 'absolute',
     bottom: 40,
-    left: 150,
-    maxWidth: '400px !important'
+    left: 100,
+    maxWidth: '400px !important',
+
+    "@media (max-width: 1000px)": {
+      position: 'absolute',
+      bottom: 30,
+      left: 20,
+    }
   },
   iconButton: {
 

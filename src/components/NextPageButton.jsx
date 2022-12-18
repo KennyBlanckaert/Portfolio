@@ -9,6 +9,10 @@ const useStyles = makeStyles({
     bottom: 25,
     left: '50%',
     color: '#ffffff',
+
+    "@media (max-width: 900px)": {
+      visibility: 'hidden',
+    }
   },
   icon: {
     color: 'white',

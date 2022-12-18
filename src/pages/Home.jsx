@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from '@mui/styles';
 
 import BannerImage from '../images/cropped-banner.png';
+import MobileImage from '../images/mobile-banner.png';
 
 import NextPageButton from '../components/NextPageButton';
 import SocialMediaBar from '../components/SocialMediaBar';
@@ -16,6 +17,11 @@ const useStyles = makeStyles({
     backgroundPosition: 'center',
     height: '100%',
     width: '100%',
+
+    "@media (orientation: portrait)": {
+      backgroundImage: `url(${MobileImage})`,
+      backgroundSize: 'cover',
+    }
   },
   firstname: {
     fontFamily: 'Motor Oil 1937 M54',
@@ -24,6 +30,11 @@ const useStyles = makeStyles({
     margin: 0,
     paddingTop: '30vh',
     paddingLeft: 'calc(13% - 2px)',
+
+    "@media (max-width: 900px)": {
+      fontSize: 30,
+      // paddingTop: 190,
+    }
   },
   lastname: {
     fontFamily: 'Motor Oil 1937 M54',
@@ -34,6 +45,14 @@ const useStyles = makeStyles({
     marginTop: -15,
     paddingTop: 0,
     paddingLeft: 'calc(13% - 3px)',
+
+    "@media (max-width: 1000px)": {
+      marginTop: -10,
+    },
+    "@media (max-width: 900px)": {
+      fontSize: 40,
+      marginTop: -5,
+    }
   },
   function: {
     fontFamily: 'Athiti',
@@ -44,6 +63,15 @@ const useStyles = makeStyles({
     marginTop: -15,
     paddingTop: 0,
     paddingLeft: 'calc(13%)',
+
+    "@media (max-width: 1000px)": {
+      marginTop: -10,
+    },
+    "@media (max-width: 900px)": {
+      fontSize: 20,
+      letterSpacing: 4,
+      marginTop: -5,
+    }
   },
   buttonGroup: {
     maxWidth: 1000,
@@ -66,8 +94,8 @@ const useStyles = makeStyles({
     fontSize: '1.3vw',
     textAlign: 'center',
     lineHeight: '45px',
-    marginLeft: '20px !important',
-    marginRight: '20px !important',
+    marginLeft: '1vw !important',
+    marginRight: '1vw !important',
     display: 'inline-block !important',
     letterSpacing: 3,
 
@@ -75,6 +103,10 @@ const useStyles = makeStyles({
       backgroundColor: 'rgba(255, 255, 255, 0.8) !important',
       color: 'rgba(0, 0, 0, 1) !important',
       border: 'none'
+    },
+    "@media (max-width: 900px)": {
+      maxWidth: '120px !important',
+      fontSize: 12,
     }
   },
 });
