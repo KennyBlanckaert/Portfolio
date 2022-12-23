@@ -6,7 +6,7 @@ const useStyles = makeStyles({
   page: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#181818'
+    backgroundColor: '#0d0d0d'
   }
 });
 
