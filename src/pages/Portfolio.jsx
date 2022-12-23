@@ -3,10 +3,11 @@ import Container from '@mui/material/Container'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
-    page: {
-      width: '100%',
-      height: '100%',
-    }
+  page: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#181818'
+  }
 });
 
 const Portfolio = function() {

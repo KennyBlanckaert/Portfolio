@@ -44,7 +44,7 @@ const App = function() {
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/resume" element={<Resume/>} />
-            <Route path="/projects" element={<Portfolio/>} />
+            <Route path="/portfolio" element={<Portfolio/>} />
           </Routes>
 
           {/* Fullscreen button */}

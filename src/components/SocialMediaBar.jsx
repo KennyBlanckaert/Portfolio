@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     position: 'absolute',
     bottom: 40,
     left: 100,
-    maxWidth: '400px !important',
+    maxWidth: '300px !important',
 
     "@media (max-width: 1000px)": {
       position: 'absolute',
@@ -59,32 +59,15 @@ const useStyles = makeStyles({
   }
 });
 
-function facebook() {
-  console.log("Facebook!");
-}
-
-function linkedin() {
-  console.log("LinkedIn!");
-}
-
-function github() {
-  console.log("Github!");
-}
-
-function mail() {
-  console.log("Mail!");
-}
-
-function instagram() {
-  console.log("Instagram!");
-}
-
-function whatsapp() {
-  console.log("Whatsapp!");
-}
-
 const SocialMediaBar = function() {
   const classes = useStyles();
+
+  const facebook = () => window.open("https://m.me/kenny.blanckaert", "_blank");
+  const linkedin = () => window.open("https://www.linkedin.com/in/kenny-blanckaert-a82975131", "_blank");
+  const github = () => window.open("https://github.com/KennyBlanckaert", "_blank");
+  const mail = () => window.open("mailto:kennyblanckaert@hotmail.com", "_blank");
+  const instagram = () => window.open("https://www.instagram.com/kennyblanckaert", "_blank");
+  const whatsapp = () => window.open("https://wa.me/032497067156", "_blank");
 
   return (
     <Container className={`${classes.iconBar}`}>

@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     height: '100%',
     width: '100%',
 
-    "@media (orientation: portrait)": {
+    "@media (orientation: portrait) and (max-width: 600px)": {
       backgroundImage: `url(${MobileImage})`,
       backgroundSize: 'cover',
     }
@@ -33,7 +33,6 @@ const useStyles = makeStyles({
 
     "@media (max-width: 900px)": {
       fontSize: 30,
-      paddingTop: 190,
     },
     "@media (max-width: 500px)": {
       fontSize: 30,

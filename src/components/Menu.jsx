@@ -16,9 +16,9 @@ const useStyles = makeStyles({
     top: 0,
     left: 0,
 
-    // Media query: 400px
-    "@media (max-width: 400px)": {
-      maxWidth: 0,
+    // Media query: 500px
+    "@media (max-width: 500px)": {
+      maxWidth: '100% !important',
       backgroundColor: 'rgba(10, 10, 10, 0)',
     },
   },
@@ -31,8 +31,8 @@ const useStyles = makeStyles({
     left: 10,
     visibility: 'hidden',
 
-    // Media query: 400px
-    "@media (max-width: 400px)": {
+    // Media query: 500px
+    "@media (max-width: 500px)": {
       maxWidth: 100,
       position: 'absolute',
       top: 10,
@@ -46,8 +46,8 @@ const useStyles = makeStyles({
     left: 10,
     visibility: 'hidden',
 
-    // Media query: 400px
-    "@media (max-width: 400px)": {
+    // Media query: 500px
+    "@media (max-width: 500px)": {
       maxWidth: 100,
       position: 'absolute',
       top: 10,
@@ -57,20 +57,20 @@ const useStyles = makeStyles({
   },
   stackOpen: {
     width: 500,
-    height: 15,
+    height: 100,
     position: 'absolute',
     top: 10,
     left: 10,
 
-    // Media query: 400px
-    "@media (max-width: 400px)": {
-      maxWidth: 200,
+    // Media query: 500px
+    "@media (max-width: 500px)": {
+      maxWidth: 250,
       position: 'absolute',
       top: 30,
-      left: -10,
+      left: 80,
       visibility: 'visible',
       display: 'inline-grid !important',
-      marginTop: 10,
+      marginTop: 20,
     },
   },
   stackClosed: {
@@ -80,15 +80,14 @@ const useStyles = makeStyles({
     top: 10,
     left: 10,
 
-    // Media query: 400px
-    "@media (max-width: 400px)": {
+    // Media query: 500px
+    "@media (max-width: 500px)": {
       maxWidth: 200,
       position: 'absolute',
       top: 30,
       left: -10,
       visibility: 'hidden',
       display: 'inline-grid !important',
-      marginTop: 10,
     },
   },
   item: {
@@ -103,9 +102,14 @@ const useStyles = makeStyles({
       color: '#0c3e52',
     },
 
-    // Media query: 400px
-    "@media (max-width: 400px)": {
-      marginTop: 10,
+    // Media query: 500px
+    "@media (max-width: 500px)": {
+      width: '300px !important',
+      maxWidth: '300px !important',
+      marginTop: 0,
+      marginLeft: 10,
+      marginRight: 10,
+
     },
   },
   active: {
@@ -121,7 +125,7 @@ const Menu = function() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = event => {
+  const toggle = () => {
     setIsOpen(current => !current);
     console.log(location)
   };
