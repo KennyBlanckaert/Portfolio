@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     backgroundColor: 'rgba(10, 10, 10, 0.1)',
     top: 0,
     left: 0,
+    zIndex: 100,
 
     // Media query: 500px
     "@media (max-width: 500px)": {
