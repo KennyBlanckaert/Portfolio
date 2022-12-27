@@ -5,9 +5,10 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   experience: {
-    maxWidth: 900,
+    maxWidth: 400,
     height: 80,
-    marginBottom: '25px !important'
+    marginBottom: '25px !important',
+    marginLeft: '0px !important'
   },
   experienceTimeline: {
     maxWidth: 70,
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
     color: '#ddd'
   },
   experienceInformation: {
-    maxWidth: 400,
+    maxWidth: 250,
     height: 80,
     float: 'left',
     marginLeft: '20px !important'
@@ -43,7 +44,7 @@ const useStyles = makeStyles({
   line: {
     position: 'relative',
     top: 78,
-    left: -269,
+    left: -145,
     maxWidth: '1px !important',
     height: 20,
     backgroundColor: '#fff'
