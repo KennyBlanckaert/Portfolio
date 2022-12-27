@@ -130,7 +130,7 @@ const Home = function() {
       </Container>
       {/* Function */}
       <Container className={`${classes.function}`} maxWidth={false} disableGutters>
-        Full Stack Developer
+        DevOps Engineer
       </Container>
 
       {/* Resume and Projects buttons */}

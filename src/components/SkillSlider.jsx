@@ -63,7 +63,7 @@ const useStyles = (props) => makeStyles({
   }
 });
 
-const SkillSLider = function({ name, abbreviation, percentage }) {
+const SkillSlider = function({ name, abbreviation, percentage }) {
   const props = {
     percentage: percentage
   }
@@ -82,4 +82,4 @@ const SkillSLider = function({ name, abbreviation, percentage }) {
   );
 }
 
-export default SkillSLider;
+export default SkillSlider;
