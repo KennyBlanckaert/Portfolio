@@ -120,7 +120,7 @@ const useStyles = makeStyles({
     border: '1px solid white',
     borderRadius: 50,
     float: 'left',
-    marginLeft: '110px !important',
+    marginLeft: '100px !important',
     marginRight: '-30px !important'
   },
   hobbyText: {
