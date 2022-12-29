@@ -43,6 +43,11 @@ const useStyles = (props) => makeStyles({
     marginLeft: '60px !important',
     borderTop: '1.5px solid white',
     float: 'left',
+
+    "@media (max-width: 600px)": {
+      maxWidth: 240,
+      marginLeft: '10px !important',
+    }
   },
   skillSliderMarker: {
     maxWidth: 18,

@@ -2,7 +2,6 @@ import React from "react";
 import Container from '@mui/material/Container';
 import SvgIcon from '@mui/material/SvgIcon';
 import IconButton from '@mui/material/IconButton';
-import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
 import { makeStyles } from '@mui/styles';
 
 import { ReactComponent as MailIcon } from '../images/svg/mail.svg';

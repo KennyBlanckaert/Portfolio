@@ -25,13 +25,23 @@ const useStyles = makeStyles({
     marginLeft: '100px !important',
     marginRight: '15px !important',
     marginBottom: '20px !important',
-    marginTop: '20px !important'
+    marginTop: '20px !important',
+
+    "@media (max-width: 600px)": {
+      marginLeft: '7.5vw !important',
+      marginRight: '7.5vw !important',
+    }
   },
   secondRow: {
     marginLeft: '190px !important',
     marginRight: '-70px !important',
     marginBottom: '20px !important',
-    marginTop: '20px !important'
+    marginTop: '20px !important',
+
+    "@media (max-width: 600px)": {
+      marginLeft: '21vw !important',
+      marginRight: '-5vw !important',
+    }
   }
 });
 

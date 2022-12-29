@@ -58,9 +58,9 @@ const Experience = function({ timelineStart, timelineEnd, title, subtitle, last 
     <Container className={`${classes.experience}`} maxWidth={false} disableGutters>
       <Container className={`${classes.experienceTimeline}`} maxWidth={false} disableGutters>
         <p className={`${classes.experienceTimelineText}`}> 
-          {timelineStart} <br/>
-          - <br/>
           {timelineEnd} <br/>
+          - <br/>
+          {timelineStart} <br/>
         </p> 
       </Container>
       <Container className={`${classes.experienceInformation}`} maxWidth={false} disableGutters>
