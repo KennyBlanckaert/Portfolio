@@ -308,7 +308,7 @@ const Resume = function() {
                 <p className={`${classes.personalSkills}`}>Amibition - Creativity - Team player - Honest</p>
                 <p className={`${classes.personalSkills}`}>Hard Working - Productive - Planning &amp; strategy</p>
                 <p className={`${classes.personalSkills}`}>Problem solving - Dedication - Curiosity - Patience</p>
-                <p className={`${classes.personalSkills}`}>Desire to learn - Thinking outside the box - Reflective</p>
+                <p className={`${classes.personalSkills}`}>Desire to learn - Reflective</p>
               </Container>
             </Container>
 

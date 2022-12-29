@@ -28,6 +28,10 @@ const useStyles = (props) => makeStyles({
     marginLeft: '0px !important',
     borderTop: '1.5px solid white',
     float: 'left',
+
+    "@media (max-width: 600px)": {
+      maxWidth: '50vw !important',
+    }
   },
   languageSliderMarker: {
     maxWidth: 18,
