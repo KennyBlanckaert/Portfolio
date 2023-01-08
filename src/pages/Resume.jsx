@@ -42,6 +42,10 @@ const useStyles = makeStyles({
     marginTop: '70px !important',
     marginLeft: '30px !important',
     maxWidth: '100%',
+
+    "@media (max-width: 500px)": {
+      marginLeft: '0px !important',
+    }
   },
   secondColumn: {
     float: 'left',
@@ -51,6 +55,9 @@ const useStyles = makeStyles({
 
     "@media (max-width: 1225px)": {
       marginTop: '-40px !important',
+    },
+    "@media (max-width: 500px)": {
+      marginLeft: '0px !important',
     }
   },
   thirdColumn: {
@@ -61,10 +68,16 @@ const useStyles = makeStyles({
 
     "@media (max-width: 1755px)": {
       marginTop: '-40px !important',
+    },
+    "@media (max-width: 500px)": {
+      marginLeft: '0px !important',
     }
   },
   wide: {
     maxWidth: 650,
+  },
+  normal: {
+    maxWidth: 575,
   },
   narrow: {
     maxWidth: 500,
@@ -98,7 +111,7 @@ const useStyles = makeStyles({
   },
   personalContainer: {
     marginTop: '-20px !important',
-    marginLeft: '20px !important'
+    paddingLeft: '20px !important',
   },
   personalSkills: {
     color: '#999',
@@ -240,7 +253,7 @@ const Resume = function() {
 
           </Container>
 
-          <Container className={`${classes.secondColumn} ${classes.narrow}`} maxWidth={false} disableGutters>
+          <Container className={`${classes.secondColumn} ${classes.normal}`} maxWidth={false} disableGutters>
 
             {/* Experience */}
             <Container className={`${classes.section} ${classes.threeFifths}`} maxWidth={false} disableGutters>

@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import Container from '@mui/material/Container'
-import Stack from '@mui/material//Stack';
+import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { makeStyles } from '@mui/styles';
+import useScrollbarSize from 'react-scrollbar-size';
 
-const useStyles = makeStyles({
+const useStyles = (props) => makeStyles({
   menu: {
     position: 'absolute',
+    maxWidth: `calc(100vw - ${props.scrollBarWidth}px) !important`,
     height: 40,
     backgroundColor: 'rgba(10, 10, 10, 0.1)',
     top: 0,
@@ -122,7 +124,12 @@ const useStyles = makeStyles({
 });
 
 const Menu = function() {
-  const classes = useStyles();
+  const { height, width } = useScrollbarSize();
+  console.log(width);
+  const props = {
+    scrollBarWidth: width
+  };
+  const classes = useStyles(props)();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -140,10 +147,10 @@ const Menu = function() {
         <CloseIcon className={`${classes.icon}`}/>
       </IconButton>
       <Stack className={`${ isOpen ? classes.stackOpen : classes.stackClosed}`} direction="row" justifyContent="space-around">
-        <Link className={`${classes.item} ${location.pathname == '/' ? classes.active : classes.inactive}`} to="/">Home</Link>
-        <Link className={`${classes.item} ${location.pathname == '/about' ? classes.active : classes.inactive}`} to="/about">About</Link>
-        <Link className={`${classes.item} ${location.pathname == '/resume' ? classes.active : classes.inactive}`} to="/resume">Resume</Link>
-        <Link className={`${classes.item} ${location.pathname == '/portfolio' ? classes.active : classes.inactive}`} to="/portfolio">Portfolio</Link>
+        <Link className={`${classes.item} ${location.pathname === '/' ? classes.active : classes.inactive}`} to="/">Home</Link>
+        <Link className={`${classes.item} ${location.pathname === '/about' ? classes.active : classes.inactive}`} to="/about">About</Link>
+        <Link className={`${classes.item} ${location.pathname === '/resume' ? classes.active : classes.inactive}`} to="/resume">Resume</Link>
+        <Link className={`${classes.item} ${location.pathname === '/portfolio' ? classes.active : classes.inactive}`} to="/portfolio">Portfolio</Link>
       </Stack>
     </Container>
   );

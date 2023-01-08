@@ -45,7 +45,7 @@ const useStyles = (props) => makeStyles({
     float: 'left',
 
     "@media (max-width: 600px)": {
-      maxWidth: '40vw !important',
+      maxWidth: '45vw !important',
       marginLeft: '10px !important',
     }
   },
