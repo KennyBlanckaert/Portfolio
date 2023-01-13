@@ -24,14 +24,21 @@ const useStyles = makeStyles({
     padding: 0,
     color: 'white',
     fontSize: 80,
-    textAlign: 'center'
+    textAlign: 'center',
+
+    "@media (max-width: 500px)": {
+      fontSize: 70
+    },
   },
   h3: {
     margin: 0,
     padding: 0,
     color: 'white',
     fontSize: 60,
-    textAlign: 'center'
+    textAlign: 'center',
+    "@media (max-width: 500px)": {
+      fontSize: 50
+    },
   },
   gradient: {
     marginLeft: '20px !important',
