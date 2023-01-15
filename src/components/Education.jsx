@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     maxWidth: 600,
     height: 40,
     marginTop: '-20px !important',
-    marginBottom: '10px !important',
+    marginBottom: '60px !important',
     marginLeft: '0px !important'
   },
   educationInformation: {
@@ -26,10 +26,15 @@ const useStyles = makeStyles({
     color: '#999',
     marginTop: '-12px !important',
     fontSize: 14
+  },
+  educationSubsubtitle: {
+    color: '#777',
+    marginTop: '-12px !important',
+    fontSize: 13
   }
 });
 
-const Education = function({ title, subtitle }) {
+const Education = function({ title, subtitle, subsubtitle }) {
   const classes = useStyles();
 
   return (
@@ -37,6 +42,7 @@ const Education = function({ title, subtitle }) {
       <Container className={`${classes.educationInformation}`} maxWidth={false} disableGutters>
         <p className={`${classes.educationTitle}`}>{title}</p>
         <p className={`${classes.educationSubtitle}`}>{subtitle}</p>
+        <p className={`${classes.educationSubsubtitle}`}>{subsubtitle}</p>
       </Container>
     </Container>
   );

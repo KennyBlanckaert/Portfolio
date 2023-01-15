@@ -5,6 +5,9 @@ import { makeStyles } from '@mui/styles';
 
 import ResumeBackground from '../images/resume-background.jpg';
 
+import eboLogo from '../images/logos/ebo.png';
+import skylineLogo from '../images/logos/skyline.png';
+
 import { ReactComponent as FootBallIcon } from '../images/svg/football.svg';
 import { ReactComponent as BicycleIcon } from '../images/svg/bicycle.svg';
 import { ReactComponent as LearningIcon } from '../images/svg/learning.svg';
@@ -189,16 +192,16 @@ const Resume = function() {
   ];
 
   const experiences = [
-    { timelineEnd: "Present", timelineStart: "Oct 2021", title: "e-BO Enterprises", subtitle: "DevOps Engineer" },
-    { timelineEnd: "Oct 2021", timelineStart: "Feb 2020", title: "e-BO Enterprises", subtitle: "System Engineer" },
-    { timelineEnd: "Jan 2020", timelineStart: "Apr 2019", title: "e-BO Enterprises", subtitle: "Master Thesis, Student Job" },
-    { timelineEnd: "Aug 2017", timelineStart: "Feb 2017", title: "Skyline Communications", subtitle: "Bachelor Thesis, Student Job" },
+    { image: eboLogo, timeline: "Present - Oct 2021", title: "e-BO Enterprises", subtitle: "DevOps Engineer" },
+    { image: eboLogo, timeline: "Oct 2021 - Feb 2020", title: "e-BO Enterprises", subtitle: "System Engineer" },
+    { image: eboLogo, timeline: "Jan 2020 - Apr 2019", title: "e-BO Enterprises", subtitle: "Master Thesis, Student Job" },
+    { image: skylineLogo, timeline: "Aug 2017 - Feb 2017", title: "Skyline Communications", subtitle: "Bachelor Thesis, Student Job" },
   ]
 
   const educations = [
-    { title: "Master of Information Engineering Technology", subtitle: "Ghent University" },
-    { title: "Bachelor of Electronics ICT", subtitle: "Odisee University College" },
-    { title: "Economics & Mathematics", subtitle: "Atheneum Ypres" },
+    { title: "Master of Information Engineering Technology", subtitle: "Ghent University", subsubtitle: "2017 - 2019" },
+    { title: "Bachelor of Electronics ICT", subtitle: "Odisee University College", subsubtitle: "2014 - 2017" },
+    { title: "Economics & Mathematics", subtitle: "Atheneum Ypres", subsubtitle: "2007 - 2014" },
   ]
 
   const languages = [
@@ -264,8 +267,8 @@ const Resume = function() {
                   experiences.map((experience, index) =>
                     <Experience 
                       key={`Experience ${index}`}
-                      timelineEnd={experience.timelineEnd}
-                      timelineStart={experience.timelineStart}
+                      image={experience.image}
+                      timeline={experience.timeline}
                       title={experience.title} 
                       subtitle={experience.subtitle} 
                       last={((index + 1) % (experiences.length))}
@@ -286,6 +289,7 @@ const Resume = function() {
                         key={`Experience ${index}`}
                         title={education.title} 
                         subtitle={education.subtitle} 
+                        subsubtitle={education.subsubtitle}
                       />
                     )
                   }
