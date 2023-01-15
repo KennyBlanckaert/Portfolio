@@ -27,6 +27,7 @@ const useStyles = makeStyles({
     marginBottom: '20px !important',
     marginTop: '20px !important',
 
+    // Media query: 600px
     "@media (max-width: 600px)": {
       marginLeft: '7.5vw !important',
       marginRight: '7.5vw !important',
@@ -38,6 +39,7 @@ const useStyles = makeStyles({
     marginBottom: '20px !important',
     marginTop: '20px !important',
 
+    // Media query: 600px
     "@media (max-width: 600px)": {
       marginLeft: '21vw !important',
       marginRight: '-5vw !important',

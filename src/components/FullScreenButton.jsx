@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     right: 25,
     color: '#ffffff',
 
+    // Media query: 900px
     "@media (max-width: 900px)": {
       visibility: 'hidden',
     }

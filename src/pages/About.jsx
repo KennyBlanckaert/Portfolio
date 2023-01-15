@@ -20,7 +20,22 @@ const useStyles = makeStyles({
     width: '100%',
     maxWidth: '100%',
     paddingTop: 150,
-    paddingLeft: 150
+    paddingLeft: 150,
+    marginLeft: '0px !important',
+
+    // Media query: 1000px
+    "@media (max-width: 1000px)": {
+      width: '80%',
+      maxWidth: '80%',
+      paddingLeft: 50
+    },
+    // Media query: 900px
+    "@media (max-width: 500px)": {
+      width: '80%',
+      maxWidth: '80%',
+      paddingTop: 80,
+      paddingLeft: 50
+    },
   },
   title: {
     fontFamily: 'Motor Oil 1937 M54',
@@ -59,7 +74,7 @@ const About = function() {
           <p className={`${classes.introduction}`}>
             As a <Gradient className={`${classes.gradient}`} dir="left-to-right" from="#0c3e52" to="#0969a5">DevOps Engineer</Gradient>, I have extensive experience in the design and implementation of infrastructure and automation solutions. <br/>
             My expertise includes <Gradient className={`${classes.gradient}`} dir="left-to-right" from="#0c3e52" to="#0969a5">automating</Gradient> product installations and common tasks with Ansible, as well as designing and implementing <Gradient className={`${classes.gradient}`} dir="left-to-right" from="#0c3e52" to="#0969a5">continuous integration and delivery pipelines</Gradient> using Jenkins. <br/>
-            I am skilled in a variety of <Gradient className={`${classes.gradient}`} dir="left-to-right" from="#0c3e52" to="#0969a5">programming languages</Gradient>, including Python, Golang, Java and C++.<br/>
+            I am skilled in a variety of <Gradient className={`${classes.gradient}`} dir="left-to-right" from="#0c3e52" to="#0969a5">programming languages</Gradient>, including Python, Golang, Java and Javascript.<br/>
             Additionally, I have experience with <Gradient className={`${classes.gradient}`} dir="left-to-right" from="#0c3e52" to="#0969a5">containerization technologies</Gradient> such as Docker and Kubernetes.
             I am dedicated to delivering high-quality, reliable and scalable systems that meet the needs of both development and operations teams. 
             I am also passionate about promoting collaboration and communication between development and operations teams to streamline the software development process and improve the overall quality of the product.

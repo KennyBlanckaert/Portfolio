@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     height: '100%',
     width: '100%',
 
+    // Media query: change background on mobile
     "@media (orientation: portrait) and (max-width: 600px)": {
       backgroundImage: `url(${MobileImage})`,
       backgroundSize: 'cover',
@@ -31,9 +32,11 @@ const useStyles = makeStyles({
     paddingTop: '30vh',
     paddingLeft: 'calc(13% - 2px)',
 
+    // Media query: 900px
     "@media (max-width: 900px)": {
       fontSize: 30,
     },
+    // Media query: 500px
     "@media (max-width: 500px)": {
       fontSize: 30,
       paddingTop: 250,
@@ -49,9 +52,11 @@ const useStyles = makeStyles({
     paddingTop: 0,
     paddingLeft: 'calc(13% - 3px)',
 
+    // Media query: 1000px
     "@media (max-width: 1000px)": {
       marginTop: -10,
     },
+    // Media query: 900px
     "@media (max-width: 900px)": {
       fontSize: 40,
       marginTop: -5,
@@ -67,9 +72,11 @@ const useStyles = makeStyles({
     paddingTop: 0,
     paddingLeft: 'calc(13%)',
 
+    // Media query: 1000px
     "@media (max-width: 1000px)": {
       marginTop: -10,
     },
+    // Media query: 900px
     "@media (max-width: 900px)": {
       fontSize: 20,
       letterSpacing: 4,
@@ -102,11 +109,13 @@ const useStyles = makeStyles({
     display: 'inline-block !important',
     letterSpacing: 3,
 
+    // Hover action
     "&:hover": {
       backgroundColor: 'rgba(255, 255, 255, 0.8) !important',
       color: 'rgba(0, 0, 0, 1) !important',
       border: 'none'
     },
+    // Media query: 900px
     "@media (max-width: 900px)": {
       maxWidth: '120px !important',
       fontSize: 12,

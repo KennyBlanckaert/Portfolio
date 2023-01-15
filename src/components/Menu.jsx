@@ -101,6 +101,7 @@ const useStyles = (props) => makeStyles({
     height: 15,
     textDecoration: 'none',
 
+    // Hover action
     "&:hover": {
       color: '#0c3e52',
     },

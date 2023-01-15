@@ -46,6 +46,7 @@ const useStyles = makeStyles({
     marginLeft: '30px !important',
     maxWidth: '100%',
 
+    // Media query: 500px
     "@media (max-width: 500px)": {
       marginLeft: '0px !important',
     }
@@ -56,9 +57,11 @@ const useStyles = makeStyles({
     marginLeft: '30px !important',
     maxWidth: '100%',
 
+    // Media query: 1225px
     "@media (max-width: 1225px)": {
       marginTop: '-40px !important',
     },
+    // Media query: 500px
     "@media (max-width: 500px)": {
       marginLeft: '0px !important',
     }
@@ -69,9 +72,11 @@ const useStyles = makeStyles({
     marginLeft: '30px !important',
     maxWidth: '100%',
 
+    // Media query: 17550px
     "@media (max-width: 1755px)": {
       marginTop: '-40px !important',
     },
+    // Media query: 500px
     "@media (max-width: 500px)": {
       marginLeft: '0px !important',
     }
@@ -192,10 +197,10 @@ const Resume = function() {
   ];
 
   const experiences = [
-    { image: eboLogo, timeline: "Present - Oct 2021", title: "e-BO Enterprises", subtitle: "DevOps Engineer" },
-    { image: eboLogo, timeline: "Oct 2021 - Feb 2020", title: "e-BO Enterprises", subtitle: "System Engineer" },
-    { image: eboLogo, timeline: "Jan 2020 - Apr 2019", title: "e-BO Enterprises", subtitle: "Master Thesis, Student Job" },
-    { image: skylineLogo, timeline: "Aug 2017 - Feb 2017", title: "Skyline Communications", subtitle: "Bachelor Thesis, Student Job" },
+    { image: eboLogo, timeline: "Oct 2021 - Present", title: "e-BO Enterprises", subtitle: "DevOps Engineer" },
+    { image: eboLogo, timeline: "Feb 2020 - Oct 2021", title: "e-BO Enterprises", subtitle: "System Engineer" },
+    { image: eboLogo, timeline: "Apr 2019 - Jan 2020", title: "e-BO Enterprises", subtitle: "Master Thesis, Student Job" },
+    { image: skylineLogo, timeline: "Feb 2017 - Aug 2017", title: "Skyline Communications", subtitle: "Bachelor Thesis, Student Job" },
   ]
 
   const educations = [

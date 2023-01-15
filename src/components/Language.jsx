@@ -29,6 +29,7 @@ const useStyles = (props) => makeStyles({
     borderTop: '1.5px solid white',
     float: 'left',
 
+    // Media query: 600px
     "@media (max-width: 600px)": {
       maxWidth: '50vw !important',
     }
