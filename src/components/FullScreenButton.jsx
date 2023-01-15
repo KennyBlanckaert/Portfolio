@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     bottom: 25,
     right: 25,
     color: '#ffffff',
+    zIndex: 20,
 
     // Media query: 900px
     "@media (max-width: 900px)": {

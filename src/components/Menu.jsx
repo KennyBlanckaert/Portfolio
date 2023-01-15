@@ -126,6 +126,7 @@ const useStyles = (props) => makeStyles({
 
 const Menu = function() {
   const { height, width } = useScrollbarSize();
+  console.log(width);
   const props = {
     scrollBarWidth: width
   };

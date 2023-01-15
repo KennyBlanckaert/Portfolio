@@ -2,19 +2,38 @@ import React from 'react';
 import Container from '@mui/material/Container'
 import { makeStyles } from '@mui/styles';
 import Gradient from 'rgt'
+import useScrollbarSize from 'react-scrollbar-size';
+
 
 import SocialMediaBar from '../components/SocialMediaBar';
 
-const useStyles = makeStyles({
+const useStyles = (props) => makeStyles({
   page: {
     maxWidth: '100%',
     height: '100%',
     backgroundColor: '#0d0d0d',
   },
+  headerMaskEnd: {
+    height: 60,
+    position: 'fixed',
+    maxWidth: `calc(100vw - ${props.scrollBarWidth}px) !important`,
+    backgroundColor: `#0d0d0d`,
+    zIndex: 10,
+  },
+  headerMaskStart: {
+    height: 60,
+    marginTop: 59,
+    position: 'fixed',
+    maxWidth: `calc(100vw - ${props.scrollBarWidth}px) !important`,
+    backgroundColor: `#0d0d0d`,
+    '-webkit-mask-image': '-webkit-gradient(linear, center top, center bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))',
+    zIndex: 10,
+  },
   wrapper: {
     maxWidth: '100%',
     height: '100%',
     overflowY: 'auto',
+    paddingBottom: 150,
   },
   content: {
     width: '100%',
@@ -29,12 +48,12 @@ const useStyles = makeStyles({
       maxWidth: '80%',
       paddingLeft: 50
     },
-    // Media query: 900px
+    // Media query: 500px
     "@media (max-width: 500px)": {
       width: '80%',
       maxWidth: '80%',
       paddingTop: 80,
-      paddingLeft: 50
+      paddingLeft: 20
     },
   },
   title: {
@@ -46,6 +65,13 @@ const useStyles = makeStyles({
     marginBottom: 100,
     borderBottom: '3px solid #0c3e52',
     display: 'inline-block',
+
+    // Media query: 500px
+    "@media (max-width: 500px)": {
+      marginBottom: 40,
+      marginLeft: 20,
+      fontSize: 25,
+    },
   },
   introduction: {
     maxWidth: 800,
@@ -59,14 +85,44 @@ const useStyles = makeStyles({
   gradient: {
     marginLeft: '20px !important',
     paddingRight: 10
-  }
+  },
+  footerMaskStart: {
+    height: 100,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    marginBottom: 99,
+    maxWidth: `calc(100vw - ${props.scrollBarWidth}px) !important`,
+    backgroundColor: `#0d0d0d`,
+    '-webkit-mask-image': '-webkit-gradient(linear, center bottom, center top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))',
+    zIndex: 10,
+  },
+  footerMaskEnd: {
+    height: 100,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    maxWidth: `calc(100vw - ${props.scrollBarWidth}px) !important`,
+    backgroundColor: `#0d0d0d`,
+    zIndex: 10,
+  },
 });
 
 const About = function() {
-  const classes = useStyles();
+  const { height, width } = useScrollbarSize();
+  const props = {
+    scrollBarWidth: width
+  };
+  const classes = useStyles(props)();
 
   return (
     <Container className={`${classes.page}`} maxWidth={false} disableGutters>
+
+      {/* Transparancy gradient header = Fade out content */} 
+      <Container className={`${classes.headerMaskEnd}`} maxWidth={false} disableGutters/>
+      <Container className={`${classes.headerMaskStart}`} maxWidth={false} disableGutters/>
+
+      {/* Actual content */}
       <Container className={`${classes.wrapper}`} maxWidth={false} disableGutters>
         <Container className={`${classes.content}`} maxWidth={false} disableGutters>
           <h2 className={`${classes.title}`}>ABOUT</h2>
@@ -85,6 +141,11 @@ const About = function() {
         <SocialMediaBar />
 
       </Container>
+
+      {/* Transparancy gradient header = Fade out content */} 
+      <Container className={`${classes.footerMaskStart}`} maxWidth={false} disableGutters/>
+      <Container className={`${classes.footerMaskEnd}`} maxWidth={false} disableGutters/>
+    
     </Container>
   );
 };

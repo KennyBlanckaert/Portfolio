@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     bottom: 40,
     left: 100,
     maxWidth: '300px !important',
+    zIndex: 20,
 
     // Media query: 1000px
     "@media (max-width: 1000px)": {
