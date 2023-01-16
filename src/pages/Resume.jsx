@@ -26,7 +26,7 @@ const useStyles = (props) => makeStyles({
     height: '100%'
   },
   headerMaskEnd: {
-    height: 60,
+    height: 50,
     position: 'fixed',
     top: 0,
     left: 0,
@@ -40,8 +40,8 @@ const useStyles = (props) => makeStyles({
     zIndex: 10,
   },
   headerMaskStart: {
-    height: 60,
-    marginTop: 59,
+    height: 50,
+    marginTop: 49,
     position: 'fixed',
     top: 0,
     left: 0,

@@ -14,15 +14,15 @@ const useStyles = (props) => makeStyles({
     backgroundColor: '#0d0d0d',
   },
   headerMaskEnd: {
-    height: 60,
+    height: 50,
     position: 'fixed',
     maxWidth: `calc(100vw - ${props.scrollBarWidth}px) !important`,
     backgroundColor: `#0d0d0d`,
     zIndex: 10,
   },
   headerMaskStart: {
-    height: 60,
-    marginTop: 59,
+    height: 50,
+    marginTop: 49,
     position: 'fixed',
     maxWidth: `calc(100vw - ${props.scrollBarWidth}px) !important`,
     backgroundColor: `#0d0d0d`,
