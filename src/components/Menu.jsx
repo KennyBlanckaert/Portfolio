@@ -11,16 +11,10 @@ const useStyles = (props) => makeStyles({
     position: 'absolute',
     maxWidth: `calc(100vw - ${props.scrollBarWidth}px) !important`,
     height: 40,
-    backgroundColor: 'rgba(10, 10, 10, 0.1)',
+    backgroundColor: 'rgba(10, 10, 10, 0.2)',
     top: 0,
     left: 0,
     zIndex: 100,
-
-    // Media query: 500px
-    "@media (max-width: 500px)": {
-      maxWidth: '100% !important',
-      backgroundColor: 'rgba(10, 10, 10, 0)',
-    },
   },
   icon: {
     color: 'white'
@@ -33,7 +27,6 @@ const useStyles = (props) => makeStyles({
 
     // Media query: 500px
     "@media (max-width: 500px)": {
-      maxWidth: '100%',
       position: 'absolute',
       top: 10,
       left: 10,
@@ -58,10 +51,9 @@ const useStyles = (props) => makeStyles({
     },
 
     // Media query: 500px
-    "@media (max-width: 500px)": {
-      marginTop: 0,
-      marginLeft: 20,
-      marginRight: 20,
+    "@media (max-width: 600px)": {
+      marginLeft: '5vw',
+      marginRight: '5vw',
     },
   },
   active: {
